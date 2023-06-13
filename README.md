@@ -31,13 +31,14 @@ solution to handle this: please open an issue or make a pull request.
 
 Install the dependencies
 
-    sudo apt-get install scanbd sane-utils tesseract-ocr mime-construct
+    sudo apt-get install scanbd sane-utils tesseract-ocr mime-construct poppler-utils dbus
 
 Get the configuration files and the scan script
 
     git clone https://github.com/foxey/scanbdScanSnapIntegration.git
 
 Edit the script to fill-in your own email address
+Note: I had to update OCR_LANGUAGES from nld+eng to just eng, ymmv. Also is useful to add an absolute log path e.g. LOG=/var/log/scan.log
 
     cd scanbdScanSnapIntegration
     vi etc/scanbd/scripts/scan.sh
